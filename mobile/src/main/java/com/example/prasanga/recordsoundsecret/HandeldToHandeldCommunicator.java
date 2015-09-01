@@ -25,6 +25,7 @@ public class HandeldToHandeldCommunicator {
     private DatagramSocket sendSocked;
     private UDPReceiver receiver = new UDPReceiver();
 
+    @TargetApi(Build.VERSION_CODES.HONEYCOMB)
     public HandeldToHandeldCommunicator(String ip, boolean isServer, Context context, MessageReceiverListener delegate)
     {
         this.IP = ip.split(":")[0];
